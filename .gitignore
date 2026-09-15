@@ -1,0 +1,37 @@
+# =========================
+# 1. Environnements Virtuels
+# =========================
+venv/
+.venv/
+env/
+.env
+
+# =========================
+# 2. Cache Python & Fichiers compilés
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# =========================
+# 3. Pytest & Playwright (Rapports et Traces)
+# =========================
+.pytest_cache/
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# =========================
+# 4. Logs & Fichiers locaux
+# =========================
+*.log
+*.pot
+
+# =========================
+# 5. OS & Éditeurs de code (IDE)
+# =========================
+.DS_Store
+.vscode/
+.idea/
