@@ -1,5 +1,6 @@
 import pytest
 
+@pytest.mark.math
 def test_one_plus_one():
   assert 1 + 1 == 2
 
@@ -10,12 +11,14 @@ def test_one_plus_two_failed():
   c = 0
   assert a + b == c
 """
+@pytest.mark.math
 def test_one_plus_two_fixed():
   a = 1
   b = 2
   c = 3
   assert a + b == c
 
+@pytest.mark.math
 def test_divide_by_zero():
   with pytest.raises(ZeroDivisionError) as e:
     num = 1 / 0
@@ -30,7 +33,7 @@ products = [
   (-5, -5, 25),     	# negative by negative
   (2.5, 6.7, 16.75) 	# floats
 ]
-
+@pytest.mark.math
 @pytest.mark.parametrize('a, b, product', products)
 def test_multiplication(a, b, product):
   assert a * b == product
